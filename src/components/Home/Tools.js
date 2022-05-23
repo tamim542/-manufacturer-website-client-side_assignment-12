@@ -8,10 +8,12 @@ const Tools = () => {
     const manufactureCard=manufacture.slice(0,6);
 
     return (
-        <div className='container card-design'>
+        <div className='container'>
+        <div className='card-design'>
             {
                 manufactureCard.map(tool=><CardTool key={tool._id} tools={tool}></CardTool>)
             }
+        </div>
         </div>
     );
 };
