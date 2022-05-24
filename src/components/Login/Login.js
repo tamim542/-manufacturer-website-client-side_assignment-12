@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { sendPasswordResetEmail } from 'firebase/auth';
+import Loading from '../Shered/Loading/Loading';
 const Login = () => {
 
     const emailRef = useRef('');
@@ -29,7 +30,7 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    if (user) {
+    if (user || guser) {
         navigate(from, { replace: true });
     }
 
@@ -38,6 +39,16 @@ const Login = () => {
         signInWithEmailAndPassword(data.email, data.password)
     };
 
+    if (error || gerror) {
+        return (
+          <div>
+            errorCase= <p className='text-red-500'><small>{error?.message || gerror?.message }</small></p>
+          </div>
+        );
+      }
+      if (loading || gloading) {
+        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}><Loading></Loading></div>
+      }
 
     // reset passwoord----------
     const resetPassword = async () => {
@@ -52,7 +63,9 @@ const Login = () => {
 
     return (
         <div className='ml-28 mt-28'>
+           
             <form onSubmit={handleSubmit(onSubmit)}>
+            
                 <div class="form-control w-full max-w-xs ">
                     <label class="label">
                     <span class="label-text">Enter Your Email or UserName</span>
@@ -89,7 +102,7 @@ const Login = () => {
 
 
 
-
+                    
 
                     <button class="btn btn-ghost mt-3"> <input type="submit" value="Login" /></button>
                 </div>

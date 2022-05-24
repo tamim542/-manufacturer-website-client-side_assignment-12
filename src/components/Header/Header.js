@@ -22,10 +22,12 @@ const Header = () => {
                             <li><Link to='/blog'>Blog</Link></li>
                             <li><Link to='/about'>About</Link></li>
 
+                            
+
 
                             {
 
-                                user ? <span ><li > <button onClick={handleSignOut}>Signout</button></li></span> : <li > <Link to="/login">Login</Link></li>
+                                user ? <span ><li><Link to="/dashboard">Dashboard</Link></li><li > <button onClick={handleSignOut}>Signout</button></li></span> : <li > <Link to="/login">Login</Link></li>
 
                             }
 
@@ -45,9 +47,15 @@ const Header = () => {
                         <li><Link to='/about'>About</Link></li>
 
 
+                        {/* <li>
+                            {
+                                user ? </li> : <span></span>
+                            }
+                        </li> */}
+
                         {
 
-                            user ? <span ><li > <button onClick={handleSignOut}>Signout</button></li></span> : <li > <Link to="/login">Login</Link></li>
+                            user ? <span ><div className='flex'><li><Link to="/dashboard">Dashboard</Link></li><li > <button onClick={handleSignOut}>Signout</button></li></div></span> : <li > <Link to="/login">Login</Link></li>
 
                         }
 
