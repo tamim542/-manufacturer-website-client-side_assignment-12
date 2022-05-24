@@ -1,7 +1,7 @@
-.card-design{
+.review-design{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 90px;
+    margin-right: 90px;
     margin-bottom: 100px;
 }

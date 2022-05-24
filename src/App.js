@@ -13,6 +13,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import MyProfile from './components/Dashboard/MyProfile';
 import MyOrder from './components/Dashboard/MyOrder';
 import AddReview from './components/Dashboard/AddReview';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<Signup></Signup>}></Route>
      </Routes>
+     <Footer></Footer>
     </div>
   );
 }

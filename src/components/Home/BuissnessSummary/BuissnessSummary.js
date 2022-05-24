@@ -4,6 +4,9 @@ import React from 'react';
 
 const BuissnessSummary = () => {
     return (
+        <div>
+            <h2 className='text-2xl font-bold text-purple-500 text-center mt-16'>Documentation of Buissness</h2>
+       
         <div className='ml-32 mr-32 mt-28 mb-16'>
             <div className='flex'>
                 <div className='ml-20 mr-20'>
@@ -37,6 +40,7 @@ const BuissnessSummary = () => {
                     <h2 className='text-center text-2xl font-bold pb-6'> Products</h2>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

@@ -93,35 +93,35 @@ const handleForm = (event) => {
 
                         <h1 style={{ color: '#31c75e' }}>Order Form</h1>
                         <span>Email</span>
-                        <br />
+                        
                         <input type="email" name='email' className='input-feild' value={user.email} readOnly required />
                         <br />
                         <span> Product Id</span>
-                        <br />
+                        
                         <input type="text" name='productid' className='input-feild' value={purchase._id} readOnly required />
                         <br />
 
                         <span>Image</span>
-                        <br />
+                       
 
                         <input type="text" name='img' className='input-feild' value={purchase.img} readOnly required />
                         <br />
-                        <br />
+                        
                         <span>Phone No.</span>
-                        <br />
+                        
                         <input type="text" name='phoneno' className='input-feild' required />
                         <br />
-                        <br />
+                       
                         <span>Address</span>
-                        <br />
+                       
                         <input type="text" name='address' className='input-feild' required />
                         <br />
-                        <br />
+                        
                         <span>Quantity</span>
-                        <br />
+                        
                         <input type="number" name='quantity' className='input-feild' value={purchase.minquantity} required />
                         <br />
-                        <br />
+                        
                       
                         <button className='button-form'><span style={{ color: 'white' }} disabled>Order</span></button>
                         <br />

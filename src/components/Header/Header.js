@@ -11,7 +11,7 @@ const Header = () => {
     }
     return (
         <div>
-            <div class="navbar bg-base-100">
+            <div class="navbar bg-purple-500 ">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -38,7 +38,7 @@ const Header = () => {
 
                         </ul>
                     </div>
-                    <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a class=" btn-ghost normal-case text-xl">Loyal Digital Platform</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal p-0">
