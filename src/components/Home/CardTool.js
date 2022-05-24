@@ -1,6 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CardTool = ({ tools }) => {
+
+    const navigate = useNavigate();
+
+    const navigateToInventory = id => {
+        
+      const id1= id.toString();
+      navigate(`/purchase/${id1}`)
+    }
+
     return (
         <div>
             <div class="card w-96  bg-base-100 shadow-xl">
@@ -12,7 +22,7 @@ const CardTool = ({ tools }) => {
                     <p>Minimum Quantity: {tools.minquantity}</p>
                     <p>Available Quantity: {tools.availablequantity}</p>
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                        <button class="btn btn-primary" onClick={() => navigateToInventory(tools._id)}>Buy Now</button>
                     </div>
                 </div>
             </div>
