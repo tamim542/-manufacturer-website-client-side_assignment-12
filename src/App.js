@@ -10,10 +10,13 @@ import Login from './components/Login/Login';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Purchase from './components/Purchase/Purchase';
 import Dashboard from './components/Dashboard/Dashboard';
-import MyProfile from './components/Dashboard/MyProfile';
+import MyProfile from './components/Dashboard/MyProfile/MyProfile';
 import MyOrder from './components/Dashboard/MyOrder';
 import AddReview from './components/Dashboard/AddReview';
 import Footer from './components/Footer/Footer';
+import AddMyInfo from './components/Dashboard/MyProfile/AddMyInfo';
+import UpdateMyInfo from './components/Dashboard/MyProfile/UpdateMyInfo';
+
 
 function App() {
   return (
@@ -33,6 +36,8 @@ function App() {
 
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >
           <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path="addmyinfo" element={<AddMyInfo></AddMyInfo>}></Route>
+          <Route path="updatemyinfo" element={<UpdateMyInfo></UpdateMyInfo>}></Route>
           <Route path="order" element={<MyOrder></MyOrder>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           
