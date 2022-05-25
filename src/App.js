@@ -16,6 +16,8 @@ import AddReview from './components/Dashboard/AddReview';
 import Footer from './components/Footer/Footer';
 import AddMyInfo from './components/Dashboard/MyProfile/AddMyInfo';
 import UpdateMyInfo from './components/Dashboard/MyProfile/UpdateMyInfo';
+import NotFound from './components/NotFound/NotFound';
+import MyPortfolio from './components/MyPortfolio/MyPortfolio';
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
        <Route path='/' element={<Home></Home>}></Route>
        <Route path='/blog' element={<Blog></Blog>}></Route>
        <Route path='/about' element={<About></About>}></Route>
+       <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
 
        <Route path="/purchase/:id" element={
         <RequireAuth>
@@ -42,7 +45,7 @@ function App() {
           <Route path="review" element={<AddReview></AddReview>}></Route>
           
         </Route>
-
+        <Route path="*" element={<NotFound/>} />
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<Signup></Signup>}></Route>
      </Routes>
