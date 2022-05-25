@@ -9,7 +9,7 @@ const Tools = () => {
 
     return (
         <div>
-             <h2 className='text-2xl font-bold text-purple-500 text-center mt-16'>All Tools Section</h2>
+             <h2 className='text-2xl font-bold text-purple-500 text-center mb-16'>All Tools Section</h2>
         
         <div className='container'>
         <div className='card-design'>
