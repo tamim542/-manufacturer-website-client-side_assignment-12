@@ -6,12 +6,15 @@ import auth from '../../firebase.init';
 import './Login.css';
 
 
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import Loading from '../Shered/Loading/Loading';
+import axios from 'axios';
+
 const Login = () => {
 
     const emailRef = useRef('');
@@ -34,9 +37,12 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
-    const onSubmit = data => {
+    const onSubmit =async data => {
 
-        signInWithEmailAndPassword(data.email, data.password)
+       await signInWithEmailAndPassword(data.email, data.password)
+    //    {data}=await axios.post('http://localhost:5000/login',{data.email});
+    //    console.log('data=',data1);
+
     };
 
     if (error || gerror) {

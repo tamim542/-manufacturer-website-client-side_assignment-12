@@ -21,3 +21,38 @@
     justify-content: center;
     align-items: center;
 }
+
+
+@media only screen and (max-width:688px){
+
+.extra-section1{
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 10;
+    margin-left: 10px;
+    margin-right: 10px;
+   
+}
+.child-div{
+    margin-bottom: 10;
+}
+
+.brand-div{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    background-color: black;
+   
+
+}
+.brand-name{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.img-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}

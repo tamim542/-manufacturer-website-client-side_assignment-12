@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './BuissnessSummary.css';
 
 
 const BuissnessSummary = () => {
@@ -8,7 +8,7 @@ const BuissnessSummary = () => {
             <h2 className='text-2xl font-bold text-purple-500 text-center mt-16'>Documentation of Buissness</h2>
        
         <div className='ml-32 mr-32 mt-28 mb-16'>
-            <div className='flex'>
+            <div className='flex card-buissness'>
                 <div className='ml-20 mr-20'>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-24 pb-6 text-center" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z" />

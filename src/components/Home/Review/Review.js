@@ -15,7 +15,7 @@ const Review = () => {
         <div className='review-design'>
             
             {
-                reviews.map(review=><div class="card w-96 bg-purple-500 pl-3 pt- pb-3 text-primary-content">
+                reviews.map(review=><div class="card w-96 bg-purple-500 pl-3 pt- pb-3 mb-4 text-primary-content">
                 <div class="card-body">
                     <h2 class="card-title">Name: {review.name}</h2>
                     <p>Description: {review.description}</p>
