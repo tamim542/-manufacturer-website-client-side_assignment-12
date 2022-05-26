@@ -18,6 +18,8 @@ import AddMyInfo from './components/Dashboard/MyProfile/AddMyInfo';
 import UpdateMyInfo from './components/Dashboard/MyProfile/UpdateMyInfo';
 import NotFound from './components/NotFound/NotFound';
 import MyPortfolio from './components/MyPortfolio/MyPortfolio';
+import AddProduct from './components/AddProduct/AddProduct';
+import ManageOrder from './components/ManageOrder/ManageOrder';
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
        <Route path='/blog' element={<Blog></Blog>}></Route>
        <Route path='/about' element={<About></About>}></Route>
        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+       <Route path='/addproduct' element={<AddProduct></AddProduct>}></Route>
+       <Route path='/manageorder' element={<ManageOrder></ManageOrder>}></Route>
 
        <Route path="/purchase/:id" element={
         <RequireAuth>

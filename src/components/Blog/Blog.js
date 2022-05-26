@@ -4,29 +4,50 @@ const Blog = () => {
     return (
         <div>
             <div className='question-blog mb-8'>
-                <h3 className='question-design text-2xl'>1. 1 How will you improve the performance of a React Application?</h3>
-               
-                <p className='question-answer'>Javascript is a heigh level programming language. NodeJS is a Javascript runtime environment and it's called a framework.
-                    Javascript can run only browsers. Javascript can run without browser with help of node js. Javascript can run in any browser engine.
-                    V8 is the Javascript engine inside of node.js that parses and runs Javascript. Javascript is used in frontend development.
-                    Nodejs is used in backend development. Some of the javascript frameworks are RamdaJS, TypedJS, etc. Some of the Nodejs modules are Lodash, express etc.  </p>
+                <h3 className='question-design text-2xl'>14.1 How will you improve the performance of a React Application?</h3>
 
-                <h3 className='question-design text-2xl'>2. What are the different ways to manage a state in a React application?</h3>
-                
-                <p className='question-answer'>Sql means relationalL database management sysstem. Nosql means non-relational or distributed database system.
-                    Sql database have fixed or static schema.Nosql database have dynamic schema. Sql database support many query and join relation. Onthe other hand
-                    nosql does not support any join relation. Where we put data it;called table in sql database. Where we put data it's called collection in nosql database.
-                    Sql databases are not suited for hierarchical data storage. Nosql databases are best suited for hierarchical data storage.
-                    Sql databases supporte for complex queries. Nosql database do not supporte for complex queries.
-                    Sql databases is Vertically Scalable. Nosql is databases Horizontally scalable.</p>
+                <p className='question-answer'>Optimization is the number one thing that is on the mind of every developer while fixing any software,  moreover web apps. There are some steps that can help us to improve the performance of a React Application ;
 
-                <h3 className='question-design text-2xl'>3.  What is the purpose of jwt and how does it work</h3>
-               
-                <p className='question-answer'>JWT or JSON Web token is an open source used to for security information between two sides a client and a server.
-                    Each JWT contains encoded JSON objects, including a set of claims. JWT are signed using a cryptographic algorithm to ensure
-                    that the claims cannot be altered after the token is issued. JWT are mainly used for authentication. After a user logs in to an
-                    application, the application will create a JWT and send it back to the user. Subsequent requests by the user will include the JWT.
-                    The token tells the server what routes, services, and resources the user is allowed to access</p>
+                    1. Nurture material state cantonal where indispensable.
+                    2. Windowing or list virtualization in React.
+
+                    3. Code-rending in React using progressive importation.
+                    4. Sluggish loading images in React.
+                    5. Memoizing React materials to confine unnecessary re-renders.
+                </p>
+
+                <h3 className='question-design text-2xl'>14.2 What are the different ways to manage a state in a React application?</h3>
+
+                <p className='question-answer'>
+                    We can follow some steps to manage state in React. These are;
+
+                    1. At first we have to creat an empty project.  For this we Will delet the sample project and connected files which are installed while we bootstrap the project.
+
+                    2. Secondly we have to use state in a component. After that we'll make a product page with a shoping chart that displays the total items in the chart using the state value.
+
+                    3. In the third steps we've created a base state for the materials and we've referenced that state in our function.
+
+                    4. At the last steps, we've to setting state using current state.</p>
+
+                <h3 className='question-design text-2xl'>14.3 How does prototypical inheritance work?</h3>
+
+                <p className='question-answer'>Simply put, prototypical inheritance refers to the ability to access the properties of an object from another object.  We use a JavaScript prototype to add new features and methods to existing object constructors.  We can then basically tell our JS code to inherit property from a prototype.
+                </p>
+                <h3 className='question-design text-2xl'>14.3 How does prototypical inheritance work?</h3>
+
+                <p className='question-answer'>Simply put, prototypical inheritance refers to the ability to access the properties of an object from another object.  We use a JavaScript prototype to add new features and methods to existing object constructors.  We can then basically tell our JS code to inherit property from a prototype.
+                </p>
+                <h3 className='question-design text-2xl'>14.6 What is a unit test? Why should write unit tests?</h3>
+
+                <p className='question-answer'>Unit testing is a type of software testing where single units or software materials are tested.  The purpose is to verify that each unit of code works as expected.
+                    Here are a few benefits to writing unit tests:
+                    1. Unit testing saves time and money.  In general, we tend to test the happy path more than the unhappy path.
+
+                    2.This naturalizes
+                    the debugging process.
+
+                    3.The unit improves test code coverage.  One controversial issue is having 100% code coverage across your application
+                </p>
             </div>
         </div>
     );

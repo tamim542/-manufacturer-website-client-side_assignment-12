@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './MyOrder.css';
 
+
 const MyOrder = () => {
 
     const [user] = useAuthState(auth);
@@ -15,19 +16,45 @@ const MyOrder = () => {
     const navigate = useNavigate();
     useEffect( () => {
         
-        const getOrders = async() =>{
+        //const getOrders = async() =>{
         
-            const email = user.email;
+            const email = user?.email;
            
-            const url = `http://localhost:5000/myorder?email=${email}`;
+            // const url = `http://localhost:5000/myorder?email=${email}`,{
+               
+            //     headers: {
+            //         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            //     };
             
-            const {data} = await axios.get(url)
-            setMyorders(data);
+            // const {data} = await axios.get(url)
+            // setMyorders(data);
            
             
-        }
-        getOrders();
+        //}
+        //getOrders();
 
+        fetch(`http://localhost:5000/myorder?email=${email}`, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        .then(res =>{
+            console.log('res', res);
+            if (res.status === 401 || res.status === 403) {
+                signOut(auth);
+                localStorage.removeItem('accessToken');
+                navigate('/');
+            }
+            return res.json()
+       })
+    
+      .then(data =>{
+        setMyorders(data);
+       
+            
+       });
+    
     }, [user])
   
 

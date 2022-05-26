@@ -23,6 +23,8 @@ const Header = () => {
                             <li><Link to='/blog'>Blog</Link></li>
                             <li><Link to='/about'>About</Link></li>
                             <li><Link to='/myportfolio'>MyPortfolio</Link></li>
+                            <li><Link to='/addproduct'>AddProduct</Link></li>
+                            <li><Link to='/manageorder'>ManageOrder</Link></li>
 
                             
 
@@ -48,6 +50,8 @@ const Header = () => {
                         <li><Link to='/blog'>Blog</Link></li>
                         <li><Link to='/about'>About</Link></li>
                         <li><Link to='/myportfolio'>MyPortfolio</Link></li>
+                        <li><Link to='/addproduct'>AddProduct</Link></li>
+                        <li><Link to='/manageorder'>ManageOrder</Link></li>
 
                         {/* <li>
                             {

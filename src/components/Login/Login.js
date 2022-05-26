@@ -35,19 +35,25 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    useEffect( () =>{
-        if (token) {
-            navigate(from, { replace: true });
-        }
-    }, [token, from, navigate])
-
     const onSubmit =async data => {
 
-       await signInWithEmailAndPassword(data.email, data.password)
-    //    {data}=await axios.post('http://localhost:5000/login',{data.email});
-    //    console.log('data=',data1);
+        await signInWithEmailAndPassword(data.email, data.password)
+     //    {data}=await axios.post('http://localhost:5000/login',{data.email});
+     //    console.log('data=',data1);
+ 
+     };
 
-    };
+    // useEffect( () =>{
+    //     if (token) {
+    //         navigate(from, { replace: true });
+    //         console.log('token',token);
+    //     }
+    // }, [token, from, navigate])
+
+    if (token) {
+        navigate(from, { replace: true });
+        console.log('token',token);
+    }
 
     if (error || gerror) {
         return (
