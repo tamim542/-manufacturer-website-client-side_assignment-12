@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useForm } from "react-hook-form";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 //import { useAuthState } from 'react-firebase-hooks/auth';
@@ -14,6 +14,7 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import Loading from '../Shered/Loading/Loading';
 import axios from 'axios';
+import useToken from '../../Hooks/useToken';
 
 const Login = () => {
 
@@ -21,7 +22,7 @@ const Login = () => {
   const passwordRef = useRef('');
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-    const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gloading, gerror] = useSignInWithGoogle(auth);
     const [
         signInWithEmailAndPassword,
         user,
@@ -29,13 +30,16 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [token] = useToken(user || gUser);
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    if (user || guser) {
-        navigate(from, { replace: true });
-    }
+    useEffect( () =>{
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
 
     const onSubmit =async data => {
 

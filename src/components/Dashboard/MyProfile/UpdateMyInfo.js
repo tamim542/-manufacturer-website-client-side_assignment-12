@@ -12,7 +12,7 @@ const UpdateMyInfo = () => {
     const [users, setUser] = useState({});
     console.log('id for update page=',user);
     useEffect( () =>{
-        const url = `http://localhost:5000/user/${id}`;
+        const url = `http://localhost:5000/updateuserinfo/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setUser(data));
@@ -30,7 +30,7 @@ const UpdateMyInfo = () => {
         const updatedUser = {email, name, address, phoneno, profilelink};
 
         // send data to the server
-        const url = `http://localhost:5000/user/${id}`;
+        const url = `http://localhost:5000/updateuserinfo/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
