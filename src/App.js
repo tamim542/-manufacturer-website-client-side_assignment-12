@@ -20,6 +20,8 @@ import NotFound from './components/NotFound/NotFound';
 import MyPortfolio from './components/MyPortfolio/MyPortfolio';
 import AddProduct from './components/AddProduct/AddProduct';
 import ManageOrder from './components/ManageOrder/ManageOrder';
+import ManageProduct from './components/ManageProduct/ManageProduct';
+import Users from './components/MakeAdmin/Users';
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
        <Route path='/addproduct' element={<AddProduct></AddProduct>}></Route>
        <Route path='/manageorder' element={<ManageOrder></ManageOrder>}></Route>
+       <Route path='/manageproduct' element={<ManageProduct></ManageProduct>}></Route>
+       <Route path='/makeadmin' element={<Users></Users>}></Route>
 
        <Route path="/purchase/:id" element={
         <RequireAuth>

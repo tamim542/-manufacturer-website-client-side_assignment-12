@@ -25,6 +25,8 @@ const Header = () => {
                             <li><Link to='/myportfolio'>MyPortfolio</Link></li>
                             <li><Link to='/addproduct'>AddProduct</Link></li>
                             <li><Link to='/manageorder'>ManageOrder</Link></li>
+                            <li><Link to='/manageproduct'>ManageProduct</Link></li>
+                            <li><Link to='/makeadmin'>MakeAdmin</Link></li>
 
                             
 
@@ -52,6 +54,8 @@ const Header = () => {
                         <li><Link to='/myportfolio'>MyPortfolio</Link></li>
                         <li><Link to='/addproduct'>AddProduct</Link></li>
                         <li><Link to='/manageorder'>ManageOrder</Link></li>
+                        <li><Link to='/manageproduct'>ManageProduct</Link></li>
+                        <li><Link to='/makeadmin'>MakeAdmin</Link></li>
 
                         {/* <li>
                             {
