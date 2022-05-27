@@ -2,7 +2,7 @@
     {
         "name": "Motherboard",
         "img": "https://i.ibb.co/2yc5GVf/ga-a320m-s2h-1-228x228.jpg",
-        "price": "9000 BDT",
+        "price": 9000,
         "description":"Display: 18.5 Inch (1366x768) HD Backlit LED LCD Panel Technology: TN Panel Environment-Friendly Comfortable Views",
 	    "minquantity":10,
 	    "availablequantity":7000       
@@ -11,7 +11,7 @@
     {
         "name": "Monitor",
         "img": "https://i.ibb.co/93NPRn6/monitor.jpg",
-        "price": "135000 BDT",
+        "price": 135000,
         "description":"Apple M1 chip with 8-core CPU and 7-core GPU, 8GB RAM, 256GB SSD, 13.3-inch 2560x1600 LED-backlit Retina Display",
         "minquantity":20,
 	    "availablequantity":5000 
@@ -20,7 +20,7 @@
     {
          "name": "SSD",
         "img": "https://i.ibb.co/9N6bX8C/ssd.jpg",
-        "price": "2300 BDT",
+        "price": 2300,
         "description":"Capacity: 128GB SSD Interface: SATA III NAND Flash: 3D NAND Controller: SMI",
         "minquantity":11,
 	    "availablequantity":6000
@@ -28,7 +28,7 @@
     {
          "name": "RAM",
         "img": "https://i.ibb.co/VCnY8Gv/ram.jpg",
-        "price": "4500 BDT",
+        "price": 4500,
         "description":"Model: PRISTINE Type- DDR4 SDRAM Capacity: 8 GB Speed- 2400MHz",
         "minquantity":10,
 	    "availablequantity":5000
@@ -36,7 +36,7 @@
     {
          "name": "Battery",
         "img": "https://i.ibb.co/tKbyM3q/battery.jpg",
-        "price": "1600 BDT",
+        "price": 1600,
         "description":"Battery Type: Li-ion Capacity: 5200 mAh Voltage: 10.8 V 6-cell Battery",
         "minquantity":20,
 	    "availablequantity":8000
@@ -44,7 +44,7 @@
     {
         "name": "UPS",
         "img": "https://i.ibb.co/NVchdfs/ups.jpg",
-        "price": "1800 BDT",
+        "price": 1800,
         "description":"Special exhaust structure and sealing technology 5 years design life(25℃) PbCaSn alloy for plate grids High-quality AGM separator",
         "minquantity":20,
 	    "availablequantity":5000 
@@ -52,7 +52,7 @@
     {
          "name": "Hard Disk",
         "img": "https://i.ibb.co/RHS9gXV/harddisk.jpg",
-        "price": "3700 BDT",
+        "price": 3700,
         "description":"Capacity:1TB Interface: Serial ATA Rotational Speed:5400 RPM Form factor: 2.5 inch",
         "minquantity":15,
 	    "availablequantity":5000
@@ -60,7 +60,7 @@
     {
          "name": "Speaker",
         "img": "https://i.ibb.co/N3MhSFN/speakeer.jpg",
-        "price": "2850 BDT",
+        "price": 2850,
         "description":"Signal / noise ratio > 70 dB Frequency response 35 Hz - 30 kHz Separation: > 50 dB",
         "minquantity":20,
 	    "availablequantity":5000
@@ -68,7 +68,7 @@
     {
          "name": "Cooling Fan",
         "img": "https://i.ibb.co/F35M3gy/cooling-Fan.jpg",
-        "price": "1900 BDT",
+        "price": 1900,
         "description":"MPN: RF-AF140-B1 Model: NZXT AER F140 Fluid Dynamic Bearing high-Performance Airflow Winglet Designed Fan Blades",
         "minquantity":20,
 	    "availablequantity":5000 

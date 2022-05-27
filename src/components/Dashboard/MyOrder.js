@@ -20,18 +20,7 @@ const MyOrder = () => {
         
             const email = user?.email;
            
-            // const url = `http://localhost:5000/myorder?email=${email}`,{
-               
-            //     headers: {
-            //         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-            //     };
-            
-            // const {data} = await axios.get(url)
-            // setMyorders(data);
            
-            
-        //}
-        //getOrders();
 
         fetch(`http://localhost:5000/myorder?email=${email}`, {
             method: 'GET',
@@ -57,6 +46,14 @@ const MyOrder = () => {
     
     }, [user])
   
+
+////-----payment page--------------
+
+    const navigateToInventory = id => {
+        
+        const id1= id.toString();
+        navigate(`/payment/${id1}`)
+      }
 
  //------------Delete order----------------
 
@@ -88,10 +85,11 @@ const MyOrder = () => {
                 <h2 class="card-title">Product Id: {myorder.productId}</h2>
                 <p>Phone No: {myorder.phoneNo}</p>
                 <p>Address: {myorder.address}</p>
+                <p>Total Price: {myorder.price}</p>
                 <p>Quantity: {myorder.quantity}</p>
                 <div style={{display:'flex'}}>
                 <div class="card-actions justify-end mr-4">
-                  <button class="btn btn-primary">Pay Now</button>
+                  <button class="btn btn-primary" onClick={() => navigateToInventory(myorder._id)}>Pay Now</button>
                 </div>
                 <div class="card-actions justify-start">
                   <button class="btn btn-primary" onClick={() => handleDelete(myorder._id)}>Cancle</button>

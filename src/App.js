@@ -23,6 +23,7 @@ import ManageOrder from './components/ManageOrder/ManageOrder';
 import ManageProduct from './components/ManageProduct/ManageProduct';
 import Users from './components/MakeAdmin/Users';
 import RequireAdmin from './components/RequireAdmin/RequireAdmin';
+import Payment from './components/Payment/Payment';
 
 
 function App() {
@@ -45,6 +46,8 @@ function App() {
         <Purchase></Purchase>
         </RequireAuth>}> 
         </Route>
+
+        <Route path="/payment/:id" element={<Payment></Payment>}></Route>
 
 
         <Route path="dashboard" element={<RequireAuth><Dashboard /></RequireAuth>} >

@@ -41,9 +41,17 @@ const handleForm = (event) => {
     const img = event.target.img.value;
     const phoneNo = event.target.phoneno.value;
     const address = event.target.address.value;
+    const price1 = event.target.price.value;
     const quantity = event.target.quantity.value;
+
+
+    
+    let quantity1 = parseInt(quantity);
    
-    const item = {email, productId, img, phoneNo, address, quantity };
+    const priceInt=parseInt(price1);
+    const price=quantity1*priceInt;
+   
+    const item = {email, productId, img, phoneNo, address, price, quantity };
     fetch('http://localhost:5000/order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -115,6 +123,10 @@ const handleForm = (event) => {
                         <span>Address</span>
                        
                         <input type="text" name='address' className='input-feild' required />
+                        <br />
+                        <span>Per Unit Price</span>
+                       
+                        <input type="number" name='price' className='input-feild' value={purchase.price} required />
                         <br />
                         
                         <span>Quantity</span>
