@@ -22,6 +22,7 @@ import AddProduct from './components/AddProduct/AddProduct';
 import ManageOrder from './components/ManageOrder/ManageOrder';
 import ManageProduct from './components/ManageProduct/ManageProduct';
 import Users from './components/MakeAdmin/Users';
+import RequireAdmin from './components/RequireAdmin/RequireAdmin';
 
 
 function App() {
@@ -34,10 +35,10 @@ function App() {
        <Route path='/blog' element={<Blog></Blog>}></Route>
        <Route path='/about' element={<About></About>}></Route>
        <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
-       <Route path='/addproduct' element={<AddProduct></AddProduct>}></Route>
-       <Route path='/manageorder' element={<ManageOrder></ManageOrder>}></Route>
-       <Route path='/manageproduct' element={<ManageProduct></ManageProduct>}></Route>
-       <Route path='/makeadmin' element={<Users></Users>}></Route>
+       <Route path='/addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+       <Route path='/manageorder' element={<RequireAdmin><ManageOrder></ManageOrder></RequireAdmin>}></Route>
+       <Route path='/manageproduct' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
+       <Route path='/makeadmin' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
 
        <Route path="/purchase/:id" element={
         <RequireAuth>

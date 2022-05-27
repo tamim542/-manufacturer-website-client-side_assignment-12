@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
+import useAdmin from '../../Hooks/useAdmin';
 
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
+    // const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
     const handleSignOut = () => {
         signOut(auth);
         localStorage.removeItem('accessToken');
@@ -23,11 +26,21 @@ const Header = () => {
                             <li><Link to='/blog'>Blog</Link></li>
                             <li><Link to='/about'>About</Link></li>
                             <li><Link to='/myportfolio'>MyPortfolio</Link></li>
-                            <li><Link to='/addproduct'>AddProduct</Link></li>
-                            <li><Link to='/manageorder'>ManageOrder</Link></li>
-                            <li><Link to='/manageproduct'>ManageProduct</Link></li>
-                            <li><Link to='/makeadmin'>MakeAdmin</Link></li>
+                            {
+                              admin && <li><Link to='/addproduct'>AddProduct</Link></li>
+                            }
 
+                            {
+                             admin && <li><Link to='/manageorder'>ManageOrder</Link></li>
+                            }
+
+                            {
+                             admin && <li><Link to='/manageproduct'>ManageProduct</Link></li>
+                            }
+                            
+                            {
+                             admin && <li><Link to='/makeadmin'>MakeAdmin</Link></li>
+                            }
                             
 
 
@@ -52,16 +65,28 @@ const Header = () => {
                         <li><Link to='/blog'>Blog</Link></li>
                         <li><Link to='/about'>About</Link></li>
                         <li><Link to='/myportfolio'>MyPortfolio</Link></li>
-                        <li><Link to='/addproduct'>AddProduct</Link></li>
-                        <li><Link to='/manageorder'>ManageOrder</Link></li>
-                        <li><Link to='/manageproduct'>ManageProduct</Link></li>
-                        <li><Link to='/makeadmin'>MakeAdmin</Link></li>
-
-                        {/* <li>
+                        
                             {
-                                user ? </li> : <span></span>
+                              admin && <li><Link to='/addproduct'>AddProduct</Link></li>
                             }
-                        </li> */}
+
+                            {
+                             admin && <li><Link to='/manageorder'>ManageOrder</Link></li>
+                            }
+
+                            {
+                             admin && <li><Link to='/manageproduct'>ManageProduct</Link></li>
+                            }
+                            
+                            {
+                             admin && <li><Link to='/makeadmin'>MakeAdmin</Link></li>
+                            }
+                            
+                        
+                        
+                        
+                        
+                        
 
                         {
 

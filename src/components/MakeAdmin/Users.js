@@ -5,11 +5,7 @@ import React, { useEffect, useState } from 'react';
 import UserRow from './UserRow';
 
 const Users = () => {
-    // const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
-    //     method: 'GET',
-    //     headers:{
-    //         authorization: `Bearer ${localStorage.getItem('accessToken')}`
-    //     }
+    
     const [users,setUsers]=useState([])
     useEffect( () => {
         
@@ -51,9 +47,9 @@ const Users = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Disrole</th>
                         </tr>
                     </thead>
                     <tbody>
