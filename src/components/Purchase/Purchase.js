@@ -45,7 +45,7 @@ const handleForm = (event) => {
     const quantity = event.target.quantity.value;
 
 
-    
+
     let quantity1 = parseInt(quantity);
    
     const priceInt=parseInt(price1);
@@ -84,7 +84,7 @@ const handleForm = (event) => {
                 </Card.Text>
                 <Card.Title>Minimum Quantity: {purchase.minquantity}</Card.Title>
                 <Card.Title>Available Quantity: {purchase.availablequantity}</Card.Title>
-                <Button variant="primary">Pay</Button>
+                {/* <Button variant="primary">Pay</Button> */}
             </Card.Body>
         </Card>
     </div>
