@@ -33,9 +33,9 @@ const Blog = () => {
 
                 <p className='question-answer'>Simply put, prototypical inheritance refers to the ability to access the properties of an object from another object.  We use a JavaScript prototype to add new features and methods to existing object constructors.  We can then basically tell our JS code to inherit property from a prototype.
                 </p>
-                <h3 className='question-design text-2xl'>14.3 How does prototypical inheritance work?</h3>
+                <h3 className='question-design text-2xl'>14.5 You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h3>
 
-                <p className='question-answer'>Simply put, prototypical inheritance refers to the ability to access the properties of an object from another object.  We use a JavaScript prototype to add new features and methods to existing object constructors.  We can then basically tell our JS code to inherit property from a prototype.
+                <p className='question-answer'>The includes() method returns true if an array contains a specified value. The includes() method returns false if the value is not found. The includes() method is case sensitive.  It does not require this value to be an Array object, so it can be applied to other kinds of objects . The example below illustrates includes() method called on the function's arguments object.
                 </p>
                 <h3 className='question-design text-2xl'>14.6 What is a unit test? Why should write unit tests?</h3>
 
