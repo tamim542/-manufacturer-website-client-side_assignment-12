@@ -30,7 +30,43 @@ const Purchase = () => {
     }
 
     
+   ////quantity change test---------------------------------------------------------
+
+
+
+//    const minQuantity=parseInt(purchase.minquantity)
+//    const availableQuantity=parseInt(purchase.availablequantity)
+//    const [quantity,setQuantity]=useState(minQuantity);
+//    useEffect(()=>{
+//        setQuantity(minQuantity)
+//    },[purchase,minQuantity])
    
+   
+//    const handleQuantity=(condition)=>{
+//        if(condition===true){
+//        if(quantity>=purchase.availablequantity){
+//    setQuantity(quantity+1);
+//    }
+//    if(condition===false){
+//    if(quantity<=purchase.minquantity){
+//    return setQuantity(minquantity)
+//    }
+//    setQuantity(quantity-1)
+//    }
+//    }
+//    }
+   
+   
+
+
+
+
+   ////////////////----------------------------------------------------------------------
+
+
+
+
+
 
 //-----------order add item -------------
 
