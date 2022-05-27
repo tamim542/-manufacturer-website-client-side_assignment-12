@@ -15,16 +15,31 @@ const Users = () => {
         
         
 
-        fetch(`http://localhost:5000/user`)
-        // , {
-           // method: 'GET',
-            //headers: {
-              //  'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-            //}
-       // }
-    .then(res => res.json())
-    .then(data=>setUsers(data))
-},[users])
+        fetch(`http://localhost:5000/user`, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+        .then(res =>res.json())
+    
+      .then(data =>setUsers(data));
+    
+    }, [users])
+//     useEffect( () => {
+        
+        
+
+//         fetch(`http://localhost:5000/user`, {
+//            method: 'GET',
+//             headers: {
+//                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+//             }
+//         })
+       
+//     .then(res => res.json())
+//     .then(data=>setUsers(data))
+// },[users])
     // if (isLoading) {
     //     return <Loading></Loading>
     // }
