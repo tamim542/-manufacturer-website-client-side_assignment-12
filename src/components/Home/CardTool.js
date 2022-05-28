@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './CardTool.css';
 
 const CardTool = ({ tools }) => {
 
@@ -12,8 +13,8 @@ const CardTool = ({ tools }) => {
     }
 
     return (
-        <div>
-            <div class="card w-96  bg-base-100 shadow-xl">
+        <div className='card-align'>
+            <div class="card  bg-base-100 shadow-xl">
                 <figure><img src={tools.img} alt="Shoes" /></figure>
                 <div class="card-body">
                     <h2 class="card-title">Name: {tools.name}</h2>
