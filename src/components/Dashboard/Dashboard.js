@@ -6,7 +6,7 @@ import useAdmin from '../../Hooks/useAdmin';
 
 const Dashboard = () => {
     const [user, loading, error] = useAuthState(auth);
-    // const [user] = useAuthState(auth);
+    
     const [admin] = useAdmin(user);
     return (
         <div class="drawer drawer-mobile">
