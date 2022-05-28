@@ -13,7 +13,7 @@
 ### `npm start`
 
 \
-Open [Live Site Link](https://assignment-11-warehouse.web.app/) to view it in your browser.
+Open [Live Site Link](https://assignment-12-c52ba.web.app/ ) to view it in your browser.
 
 
 

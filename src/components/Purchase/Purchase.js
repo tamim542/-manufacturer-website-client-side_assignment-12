@@ -12,6 +12,8 @@ const Purchase = () => {
     const [disabled, setDisabled] = useState(false)
 
     const [purchase, setPurchase] = useState({})
+    const [update, setUpdate]=useState(false);
+
 
 
     const min = purchase.minquantity;
@@ -19,7 +21,7 @@ const Purchase = () => {
 
     const checkMinMax = e => {
         const N = +e;
-        // console.log(N, max, min);
+        
 
         if (N > max) {
             setDisabled(true)
@@ -42,6 +44,7 @@ const Purchase = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setPurchase(data))
+            
     }, [])
 
 
@@ -88,12 +91,74 @@ const Purchase = () => {
 
             } );
 
+
+//////----------------------------minus quantity from db and manufacture collection----------------------------------
+
+const {availablequantity, ...rest} = purchase;
+let quantity12 = parseInt(availablequantity);
+// const quantityInput = event.target.quantity.value;
+// const quantityInt=parseInt(quantityInput);
+
+const quantityAdd=quantity12-quantity1;
+
+
+const updatedQuantity = {availablequantity:quantityAdd,...rest};
+console.log('updatedQuantity====',updatedQuantity);
+// put data to the server
+const url = `http://localhost:5000/availablequantity/${id}`;
+
+fetch(url, {
+ method: 'PUT',
+ headers: {
+     'content-type': 'application/json'
+ },
+ body: JSON.stringify( updatedQuantity )
+})
+ .then(res => res.json())
+ .then(data => {
+    console.log(data);
+     
+ })
+
+
         event.target.reset();
 
     }
 
 
-    console.log(disabled);
+ //--------------add quantity------------------------------------------------------
+//  const addQuantity=(event)=>{
+//     event.preventDefault();
+//     const {availablequantity, ...rest} = purchase;
+//     let quantity1 = parseInt(availablequantity);
+//  const quantityInput = event.target.quantity.value;
+//  const quantityInt=parseInt(quantityInput);
+//  const quantityAdd=quantity1-quantityInt;
+ 
+
+//  const updatedQuantity = {availablequantity:quantityAdd,...rest};
+//  console.log(updatedQuantity);
+//  // put data to the server
+//  const url = `http://localhost:5000/minusquantity/${id}`;
+//  console.log('id',url)
+//  fetch(url, {
+//      method: 'PUT',
+//      headers: {
+//          'content-type': 'application/json'
+//      },
+//      body: JSON.stringify( updatedQuantity )
+//  })
+//      .then(res => res.json())
+//      .then(data => {
+//          console.log('success', data);
+//          alert('Quantity Add Successfully');
+//      })
+
+//      //reset field
+//           event.target.reset();
+
+
+// }
 
     //-----------end order add item -------------
 
